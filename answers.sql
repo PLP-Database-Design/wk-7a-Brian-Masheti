@@ -3,6 +3,8 @@ CREATE DATABASE products;
 
 -- Use the products Database
 USE products;
+
+
 -- Question 1 – Achieving 1NF
 
 -- Create a new table to represent 1NF structure
@@ -39,8 +41,11 @@ VALUES
     (102, 'Jane Smith'),
     (103, 'Emily Clark');
 
+
 -- Verify the inserted data
 SELECT * FROM Customers;
+
+
 -- Create OrderProducts table (product and quantity info)
 CREATE TABLE OrderProducts (
     OrderID INT,
@@ -51,13 +56,14 @@ CREATE TABLE OrderProducts (
 );
 
 -- Insert order-product data
-INSERT INTO OrderProducts (OrderID, Product, Quantity) VALUES
-(101, 'Laptop', 2),
-(101, 'Mouse', 1),
-(102, 'Tablet', 3),
-(102, 'Keyboard', 1),
-(102, 'Mouse', 2),
-(103, 'Phone', 1);
+INSERT INTO OrderProducts (OrderID, Product, Quantity) 
+    VALUES
+        (101, 'Laptop', 2),
+        (101, 'Mouse', 1),
+        (102, 'Tablet', 3),
+        (102, 'Keyboard', 1),
+        (102, 'Mouse', 2),
+        (103, 'Phone', 1);
 
 -- Verify the inserted data
 SELECT * FROM OrderProducts;
