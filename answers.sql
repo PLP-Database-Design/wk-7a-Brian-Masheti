@@ -48,6 +48,9 @@ VALUES
 -- View the Orders table
 SELECT * FROM Orders;
 
+-- Drop the existing Product table if it exists
+DROP TABLE IF EXISTS Product;
+
 -- Create the Product table
 CREATE TABLE Product (
     OrderID INT,
